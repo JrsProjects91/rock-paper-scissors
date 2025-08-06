@@ -1,8 +1,6 @@
-.javatest {
-    font-weight: 400;
-}
 
 body {
+    font-size: x-large;
     min-height:  100vh;
     background-color: lightgray;
     flex-direction: column;
@@ -22,9 +20,13 @@ body, .main-container, .human-score-container, .computer-score-container {
 .main-container {
     flex-direction: column;
     gap: 20px;
-    font-size: x-large;
+    font-size: xx-large;
     border: solid 2px black;
     padding: 30px;
 }
 
-
+button {
+    font-size: 20px;
+    font-weight: 400px;
+    padding: 10px;
+}

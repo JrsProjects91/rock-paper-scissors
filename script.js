@@ -5,8 +5,9 @@ let computerScore = 0;
 const human_score_dom = document.querySelector('#human_score')
 const computer_score_dom = document.querySelector('#computer_score')
 const notificationUpdates = document.querySelector('#notifications')
-const choiceInput = document.querySelector('#choice')
-const playButton = document.querySelector('button')
+const rockButton = document.querySelector('#rock')
+const paperButton = document.querySelector('#paper')
+const scissorsButton = document.querySelector('#scissors')
 
 
 const isGameOver = () => {
@@ -29,14 +30,16 @@ function getComputerChoice() {
 }
 
 
-playButton.addEventListener("click", playGame)
+rockButton.addEventListener("click", (e) => {
+    playGame('Rock')
+})
+paperButton.addEventListener("click", (e) => {
+    playGame("Paper")
+})
+scissorsButton.addEventListener("click", () => {
+    playGame("Scissors")
+})
 
-function getHumanChoice() {
-    const choice = choiceInput.value
-    choiceInput.value = "";
-    return choice;
-
-}
 
 function updateDomScores() {
     human_score_dom.textContent = humanScore
@@ -63,9 +66,9 @@ if (humanChoice === computerChoice) {
 }
 
 
-function playGame() {
+function playGame(choice) {
     if (!isGameOver()){
-             playRound(getHumanChoice(), getComputerChoice());
+             playRound(choice, getComputerChoice());
     }
 
     if (isGameOver()) {
