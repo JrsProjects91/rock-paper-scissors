@@ -1,3 +1,30 @@
 .javatest {
     font-weight: 400;
 }
+
+body {
+    min-height:  100vh;
+    background-color: lightgray;
+    flex-direction: column;
+    gap: 20px;
+}
+
+body, .main-container, .human-score-container, .computer-score-container {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.human-score-container, .computer-score-container {
+  gap: 10px;
+}
+
+.main-container {
+    flex-direction: column;
+    gap: 20px;
+    font-size: x-large;
+    border: solid 2px black;
+    padding: 30px;
+}
+
+
